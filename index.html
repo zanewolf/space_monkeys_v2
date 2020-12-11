@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>CS171 - Space Monkeys</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--Code Sources:
+    Fullpage library from https://github.com/alvarotrigo/fullPage.js
+    Parallax CSS Stars modified from https://codepen.io/saransh/details/BKJun
+    -->
+	<link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/stars.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/fonts/stylesheet.css" charset="utf-8"/>
+
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+
+
+
+</head>
+<body>
+
+<div id="fullpage">
+	<!-- Title Page -->
+	<div class="section " id="section0">
+		<div class="intro" id = "star-intro">
+			<div class = "stars"></div>
+			<div class = "stars2"></div>
+			<div class = "stars3"></div>
+			<div class="container-fluid h-100">
+				<div class="row h-100 justify-content-center">
+					<div class="align-self-center">
+						<h5>THE HISTORY OF</h5>
+						<h5 style="font-size:8em; color:#ffb700">SPACE FLIGHT</h5>
+						<h3>BY THE SPACE MONKEYS</h3>
+					</div>
+				</div>
+			</div>
+			<!--<div id = "title"><span> A History of Space Flight </span><br/> by the space monkeys</div>-->
+		</div>
+	</div>
+
+	<!-- Dashboard -->
+	<div class="section " id="section1">
+		<div class="star-section">
+			<div class = "stars"></div>
+			<div class = "stars2"></div>
+			<div class = "stars3"></div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-8">
+						<div id="freq-viz"></div>
+					</div>
+					<div class="col-4">
+						<div id="bar-viz"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div id="stacked-viz"></div>
+					</div>
+<!--					<div class="vis-holder">-->
+
+<!--					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/libraries/fullpage.js"></script>
+
+<script src="//unpkg.com/d3-force-magnetic"></script>
+<!--<script type="text/javascript" src="js/libraries/examples.js"></script>-->
+
+<!-- d3 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-collection/1.0.5/d3-collection.min.js"></script>
+<script src="https://d3js.org/d3-timer.v2.min.js"></script>
+<script src="js/libraries/d3-tip.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
+<script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+
+
+
+
+
+<!--- Add Our JS Files --->
+<!--<script src="js/old_viz/launchvis.js"></script>-->
+<!--<script src="js/old_viz/brushvis.js"></script>-->
+<!--<script src="js/old_viz/flightvis.js"></script>-->
+<!--<script src="js/old_viz/mapbarvis.js"></script>-->
+<!--<script src="js/old_viz/networkvis.js"></script>-->
+<script src="js/treedata.js"></script>
+<!--<script src="js/old_viz/orbitSystem.js"></script>-->
+
+<script src="js/freqvis.js"></script>
+<script src="js/barvis.js"></script>
+<script src="js/stackedvis.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript">
+
+// <!--	toggle the stars on and off for the flight vis-->
+	$("#starButton").click(function(){
+		$("#orbitStar1").toggleClass("stars");
+		$("#orbitStar2").toggleClass("stars2");
+		$("#orbitStar3").toggleClass("stars3");
+	});
+
+
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['1', '2', '3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
+        sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Title', 'Page 2','Space Race','Moon Landing','Post-Space Race','First Question','Industry Visualization','New Eras','Age of Exploration',
+			'Second Question','Launch Visualization','Hubble & ISS','Commercialization Age','Page 14','Third Question','Rocket Visualization','Delta II & Cosmos','Satellites','Fourth Question',
+			'Satellite Visualization',"What's next?", 'Creators','Sources']
+    });
+</script>
+
+<script>
+	var clicks = 0;
+	function FactClick() {
+		clicks += 1;
+		console.log(clicks)
+		flightVis.wrangleData();
+
+		if(clicks>=3) {
+			console.log("IT WORKS!")
+			document.getElementById('AgeSelector').style.display = "block";
+			document.getElementById('countrySelector').style.display = "block";
+		}
+	};
+</script>
+
+<script src="js/old_viz/movies.js"></script>
+
+</body>
+</html>

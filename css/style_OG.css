@@ -1,0 +1,522 @@
+h1{
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+}
+#title{
+    font-size: 5em;
+    font-family: aerospaceregular;
+    color: #fff;
+    margin:0;
+    text-align:center;
+}
+.intro p{
+    color: #fff;
+}
+
+#section21 h2{
+    font-size: 28pt;
+}
+#section21 h3{
+    font-size: 16pt;
+    font-family:  a-space_light_demoregular;
+}
+.image-block {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+    text-align:center;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+/* Overwriting styles for control arrows for slides
+* --------------------------------------- */
+.controlArrow.prev {
+    left: 50px;
+}
+.controlArrow.next{
+    right: 50px;
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+    color: #fff;
+}
+
+/* template css */
+body {
+    padding: 5vh;
+}
+
+.container-fluid {
+    border: none;
+    border-radius: 5px;
+    padding: 5vh;
+}
+
+.header {
+    height: 15vh;
+    background: none;
+}
+
+h1 {
+    color: #F2E9E4;
+}
+
+h2 {
+    font-size: 3em;
+    /*font-family: arial,helvetica;*/
+    font-family: a-space_light_demoregular;
+    color: #fff;
+    margin:0;
+    font-style: italic;
+}
+
+.carousel-caption>h2 {
+    font-size: 2em;
+}
+
+.carousel-caption>h3 {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1em;
+    font-family: arial,helvetica;
+    color: #fff;
+}
+
+.network-title {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.rocket-stats {
+    margin-top: 7px;
+    font-style: italic;
+}
+
+.story-line {
+    height: 80%;
+    width:  80vw;
+}
+
+.main-body {
+    height: 50vh;
+}
+
+.one-col {
+    background: none;
+}
+
+.center-center {
+    height: 100%;
+}
+
+.noUi-base, noUi-connects{
+    height: 100%;
+}
+
+.footer {
+    height: 20vh;
+    background: none;
+}
+
+.vis-holder {
+    height: 100%;
+    width: 100%;
+}
+
+#world-map, #world-bar, #orbit-vis, #slider, #network-vis, #orbit-vis2, #launches-vis,#legendText, #brush-plot,#networkLegend-vis, #orbitLegend-vis {
+    height: 100%;
+    width:  100%;
+}
+
+/* NETWORK VIS CSS */
+#network-vis, #orbit-vis{
+    border: none;
+    border-radius: 5px;
+    height: 100vh;
+}
+
+
+
+#networkTooltip h3 {
+    text-align: center;
+    padding-bottom: 5px;
+    color: black;
+}
+
+#networkTooltip div> p{
+    font-size:15pt;
+    text-align: left;
+    color: black;
+}
+
+.networkLegendText, .orbitLegendText{
+    color: white;
+}
+
+#spacemonkey{
+    content: url('../images/spacemonkey.svg');
+    display: block;
+    position: absolute;
+    width: 50%;
+
+}
+
+/* Map Vis CSS */
+.circle {
+    /*stroke: #d61111;*/
+    stroke-width: 3;
+    /*fill: #d61111;*/
+    fill-opacity: 70%;
+}
+
+.d3-tip {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 70px;
+    padding: 2px;
+    font: 20px sans-serif;
+    color: white;
+    background: #262729;
+    border-radius: 8px;
+    stroke: grey;
+}
+
+#map_animation {
+
+}
+
+.map-title {
+    fill: white;
+}
+
+/* Brush Vis CSS */
+.x-axis {
+    fill: black;
+}
+
+#brush-plot {
+    fill: white;
+}
+
+#brush-plot text {
+    fill: white;
+}
+
+#brush-plot .axis path {
+    fill: none;
+    stroke: white;
+}
+
+#brush-plot .axis line {
+    fill: none;
+    stroke: white;
+}
+
+.pathGroup path {
+    stroke: lightslategrey;
+    fill: white;
+    opacity: 80%;
+}
+
+/* Flight Vis CSS */
+
+#launches-vis{
+    border: none;
+    border-radius: 5px;
+    height: 80vh;
+}
+
+.x-axis {
+    fill: black;
+}
+
+#launches-vis {
+    fill: white;
+}
+
+#launches-vis text {
+    fill: white;
+}
+
+#launches-vis .axis path {
+    fill: none;
+    stroke: white;
+}
+
+#launches-vis .axis line {
+    fill: none;
+    stroke: white;
+}
+
+#FlightLegend-vis, #FlightText {
+    height: 100%;
+    width:  100%;
+}
+
+.age-label {
+    font-weight: bold;
+
+}
+
+.pathGroup path {
+    stroke: #778899;
+    fill: #00ffd4;
+    opacity: 80%;
+}
+
+.container {
+    width: 890px;
+}
+
+#graphic {
+    padding-top: 60px;
+}
+
+.sat-info {
+    fill: white;
+}
+
+/*#sections {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    width: 250px;*/
+/*    top: 0px;*/
+/*    z-index: 90;*/
+/*    padding-bottom: 200px;*/
+/*}*/
+
+
+
+/*.orbit {*/
+/*    stroke: #ccc;*/
+/*    fill: transparent;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+.carousel-item > img {
+    max-width: 50%;
+}
+
+.carousel-caption {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 20px sans-serif;
+    color: white;
+    background: #262729;
+    border-radius: 8px;
+    stroke: grey;
+    opacity: 0.75;
+}
+
+.img-thumbnail {
+    max-height: 100%;
+}
+
+.row-height {
+    max-height: 40vh;
+}
+
+.endnoteTitle{
+    font-family: a-space_light_demoregular;
+    color: #ffb700;
+    text-align: center;
+}
+
+.end-notes h3 {
+    font-family: a-space_light_demoregular;
+    text-align: center;
+    padding: 20pt;
+
+}
+/*.end-notes p{*/
+/*    margin-left: 20vw;*/
+/*    font-size:14pt;*/
+/*    text-align: center;*/
+/*}*/
+
+.end-notes{
+    margin-top: 5vh;
+    text-align: center;
+}
+
+
+
+
+
+/* Video sections*/
+
+/*#myVideo {
+    position: fixed;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+} */
+
+.video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Add some content at the bottom of the video/page */
+.content_video {
+    /*position: fixed; padding: 20px;*/
+    position: absolute;
+    vertical-align: middle;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    align-content: center;
+    align-items: center;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+h5 {
+    font-size: 5em;
+    /*font-family: arial,helvetica;*/
+    font-family: a-space_light_demoregular;
+    color: #fff;
+    margin:0;
+}
+
+.video-parent {
+    padding: 0vh;
+}
+
+.content_video > div {
+    margin: 20px;
+}
+
+.content_video .row {
+    height: 100%;
+}
+
+.date-range {
+    font-size: 3em;
+    color: #ffb700;
+    margin-bottom: 20px;
+}
+
+.content_video h2 {
+    text-align: left;
+}
+
+.content_video p {
+    text-align: left;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+.content_image {
+    /*position: fixed; padding: 20px;*/
+    position: absolute;
+    vertical-align: middle;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    align-content: center;
+    align-items: center;
+}
+
+.content_image2 {
+    /*position: fixed; padding: 20px;*/
+    position: absolute;
+    /*vertical-align: middle;*/
+    bottom: 0;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    /*margin: auto;*/
+    /*align-content: center;*/
+    /*align-items: center;*/
+}
+
+.content_image > div {
+    margin: 20px;
+    margin-right: 500px;
+}
+
+.content_image .row {
+    height: 40%;
+}
+.content_image p {
+    text-align: left;
+    font-size: 20px;
+}
