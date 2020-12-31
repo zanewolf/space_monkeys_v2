@@ -29,6 +29,7 @@ class Brushvis {
         vis.margin = {top: 20, right: 50, bottom: 20, left: 50};
         vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right;
         vis.height = $("#" + vis.parentElement).height() - vis.margin.top - vis.margin.bottom;
+        // console.log( vis.height)
 
         // SVG drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")

@@ -11,7 +11,8 @@ let promises = [
     d3.csv("data/prepared_launch_data.csv"),
 	d3.csv("data/prepared_satellite_data.csv"),
 	d3.json("data/treeData.json"), //hierarchical version of launch_data
-	d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json")
+	d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"),
+	d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered.csv")
 ];
 
 Promise.all(promises)
@@ -116,11 +117,14 @@ function createVis(data){
 	satelliteData = data[1];
 	// treeData      = data[2];
 	geoData       = data[3];
+	practiceData  = data[4];
 
 	// instantiate visualization objects
 	freqVis = new FreqVis("freq-viz", launchData);
 	barVis = new BarVis("bar-viz", launchData);
-	stackedVis = new StackedVis("stacked-viz", launchData);
+	stackedVis = new StackedVis("stacked-viz", launchData, practiceData);
+
+	// brushVis   = new Brushvis("brushed-viz", launchData);
 
 
 

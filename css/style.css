@@ -71,14 +71,14 @@ p {
 /*}*/
 
 
-#freq-viz, #bar-viz{
+#freq-viz, #bar-viz, #stacked-viz{
     border: none;
     border-radius: 5px;
     height: 50vh;
     width: 98%;
 }
 
-#stacked-viz{
+#brush-viz, #brush-viz2{
     border: none;
     border-radius: 5px;
     height: 48vh;
