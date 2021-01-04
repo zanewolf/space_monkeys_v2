@@ -74,7 +74,7 @@ p {
 #freq-viz, #bar-viz, #stacked-viz{
     border: none;
     border-radius: 5px;
-    height: 50vh;
+    height: 80vh;
     width: 98%;
 }
 
@@ -93,4 +93,12 @@ p {
     /* Preserve aspet ratio */
     min-width: 100%;
     min-height: 100%;
+}
+
+.axis {
+    color: white;
+}
+
+.tick {
+    stroke-color: white;
 }

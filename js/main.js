@@ -3,6 +3,7 @@ let freqVis, barVis, stackedVis;
 // Function to convert date objects to strings or reverse
 let dateFormatter = d3.timeFormat("%Y");
 let dateParser = d3.timeParse("%m/%d/%y");
+let dateParserYear = d3.timeParse("%Y");
 
 
 
@@ -24,7 +25,10 @@ Promise.all(promises)
 		// clean up data
 		data[0].forEach((d, i) => {
 
+			// d.year = dateParserYear(dateFormatter(new Date(d.Datum)))
 			d.year = dateFormatter(new Date(d.Datum))
+
+			// console.log(d.year)
 			// add age
 
 			// clean up country info
@@ -128,5 +132,11 @@ function createVis(data){
 
 
 
+}
+var selectedCategory = $('#categorySelector').val();
+function categoryChange(){
+	selectedCategory = $('#dropdownCategorySelector').val();
+
+	stackedVis.wrangleData();
 }
 
