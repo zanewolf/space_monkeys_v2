@@ -50,6 +50,65 @@ p {
     color: #fff;
 }
 
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #394a56;
+    padding: 16pt;
+}
+
+.label-text {
+    padding: 16pt;
+    /*margin-left: 16px;*/
+    /*margin-top: 10px;*/
+}
+.label-text1 {
+    padding: 16pt;
+    /*margin-right: 16px;*/
+    color: white;
+}
+.label-text2 {
+    padding: 16pt;
+    /*margin-left: 16px;*/
+    color: white;
+}
+
+.toggle {
+    isolation: isolate;
+    position: relative;
+    height: 30px;
+    width: 60px;
+    border-radius: 15px;
+    /*stroke: white;*/
+    /*border-color: white;*/
+    overflow: hidden;
+    box-shadow:
+            /*-8px -4px 8px 0px #ffffff,*/
+            /*8px 4px 12px 0px #d1d9e6,*/
+            4px 4px 4px 0px #d1d9e6 inset,
+            -4px -4px 4px 0px #ffffff inset;
+}
+
+.toggle-state {
+    display: none;
+}
+
+.indicator {
+    height: 100%;
+    width: 200%;
+    background: #ecf0f3;
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+    box-shadow:
+            -8px -4px 8px 0px #db2323,
+            8px 4px 12px 0px #a90f49;
+}
+
+.toggle-state:checked ~ .indicator {
+    transform: translate3d(25%, 0, 0);
+}
 
 /* Centered texts in each section
 * --------------------------------------- */
@@ -74,8 +133,24 @@ p {
 #freq-viz, #bar-viz, #stacked-viz{
     border: none;
     border-radius: 5px;
-    height: 80vh;
+    height: 70vh;
     width: 98%;
+}
+
+#stackedToolTip h3 {
+    text-align: center;
+    padding-bottom: 5px;
+    color: black;
+}
+
+#stackedToolTip div> p{
+    font-size:15pt;
+    text-align: left;
+    color: black;
+}
+
+.area:hover{
+
 }
 
 #brush-viz, #brush-viz2{

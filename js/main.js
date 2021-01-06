@@ -133,10 +133,10 @@ function createVis(data){
 
 
 }
-var selectedCategory = $('#categorySelector').val();
+// var selectedCategory = $('#categorySelector').val();
+var selectedCategory = true; // true = Country, false = Company
 function categoryChange(){
-	selectedCategory = $('#dropdownCategorySelector').val();
-
+	selectedCategory = !selectedCategory;
 	stackedVis.wrangleData();
 }
 

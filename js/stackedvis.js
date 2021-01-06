@@ -43,6 +43,10 @@ class StackedVis {
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")")
             .style("overflow", "visible");
 
+        vis.tooltip = d3.select("body").append('div')
+            .attr('class', "tooltip")
+            .attr('id', 'stackedTooltip');
+
 
 
         // set scales and axes
@@ -76,8 +80,15 @@ class StackedVis {
 
     wrangleData() {
         let vis = this;
+       //
+       // let catSort = function(){
+       //     return selectedCategory == true ? "Country" : "Company"
+       // }
 
-        vis.selectedCategory = selectedCategory;
+       selectedCategory ? vis.selectedCategory= "Country": vis.selectedCategory = "CompanyName"
+
+
+        // vis.selectedCategory = selectedCategory;
         // vis.selectedCategory = "Country";
         // vis.selectedCategory = "CompanyName";
 
@@ -122,10 +133,10 @@ class StackedVis {
             .domain(vis.dataCategories)
             .range(colorArray);
 
-        vis.dataCategories.forEach((d,i)=>{
-            console.log(d, vis.colorScale(d));
-            // vis.colorScale(d)
-        })
+        // vis.dataCategories.forEach((d,i)=>{
+        //     console.log(d, vis.colorScale(d));
+        //     // vis.colorScale(d)
+        // })
         //
         vis.area = d3.area()
             .curve(d3.curveCardinal)
@@ -167,7 +178,8 @@ class StackedVis {
 
         // Draw the layers
         vis.categories = vis.svg.selectAll(".area")
-            .data(vis.displayData);
+            .data(vis.displayData)
+            .attr("id", d=>"#area-"+d.key);
 
         // Call axis functions with the new domain
         vis.svg.select(".x-axis").call(vis.xAxis);
@@ -183,19 +195,42 @@ class StackedVis {
                 return vis.colorScale(d)
             })
             .attr("d", vis.area)
-            .on("click", function(event,d){
-                console.log("clicked!");
-                console.log(d.key);
-                vis.svg.selectAll(".categories")
-                    .text(d.key);
+            .on("mouseover", function(event,d){
+                d3.selectAll(".area").style("fill", "grey")
+                d3.selectAll("#area-"+d.key).style("fill", d=>vis.colorScale(d))
+                // vis.tooltip
+                //     .style("opacity", 1)
+                //     .style("left", xplacement + "px")
+                //     .style("top", yplacement + "px");
+                // console.lo
 
+
+
+                // if (d.height === 0) {
+                    // rocket type tooltip
+                    vis.tooltip
+                        .attr('id', 'stackedToolTip')
+                        .html(`
+                     <div style="border: thin solid grey; border-radius: 5px; background: darkgray; padding: 20px">
+                         <p> <strong>${d.key}</p>
+
+                         
+                     </div>`);
+                // console.log("clicked!");
+                console.log(d.key);
+                // vis.svg.selectAll(".categories")
+                //     .text(d.key);
+
+            })
+            .on("mouseout", function(event,d){
+                d3.selectAll(".area").style("fill", d=>vis.colorScale(d))
             });
 
 
         // TO-DO (Activity IV): update tooltip text on hover
 
 
-        // vis.categories.exit().remove();
+        vis.categories.exit().remove();
 
 
         // vis.svg.select(".categories")

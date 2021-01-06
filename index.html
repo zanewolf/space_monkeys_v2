@@ -64,11 +64,23 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-3">
-						<div class="btn-group" role="group" aria-label="Basic example">
-<!--							<button type="button" class="btn btn-secondary">Left</button>-->
-							<button type="button" class="btn btn-secondary" value="Country" onchange="categoryChange()">Country</button>
-							<button type="button" class="btn btn-secondary" value="Company" onchange="categoryChange()">Company</button>
-						</div>
+						<label class="label">
+							<div class="label-text1">Country</div>
+							<div class="toggle">
+
+								<input class="toggle-state" type="checkbox" name="check" value="false" id = "categorySelector" onclick = "categoryChange()" />
+								<div class="indicator"></div>
+							</div>
+
+							<div class="label-text2">Company</div>
+						</label>
+
+						<!--						Sort Data By:-->
+<!--						<div class="btn-group" role="group" aria-label="Basic example">-->
+<!--&lt;!&ndash;							<button type="button" class="btn btn-secondary">Left</button>&ndash;&gt;-->
+<!--							<button type="button" class="btn btn-secondary" value="Country" onchange="categoryChange()">Country</button>-->
+<!--							<button type="button" class="btn btn-secondary" value="Company" onchange="categoryChange()">Company</button>-->
+<!--						</div>-->
 <!--						<div class="dropdown">-->
 <!--							<button class="btn btn-secondary dropdown-toggle" onchange="categoryChange()" type="button" id="dropdownCategorySelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
 <!--								View Data by...-->
